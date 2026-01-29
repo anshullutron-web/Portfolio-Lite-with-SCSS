@@ -1,0 +1,29 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+
+  &-left {
+    padding: 120px 80px;
+    color: $white;
+
+    h1 {
+      font-size: 44px;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-right {
+    position: relative;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
