@@ -1,0 +1,20 @@
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    &-right {
+      display: none;
+    }
+
+    &-left {
+      padding: 80px 30px;
+    }
+  }
+
+  .services-cards,
+  .works-grid,
+  .team-grid,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

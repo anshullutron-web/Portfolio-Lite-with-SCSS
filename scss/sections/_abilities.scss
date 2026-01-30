@@ -1,0 +1,79 @@
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: $primary-color;
+  color: $white;
+  font-size: $font-sm;
+  padding: 4px 8px;
+  border-radius: $radius-lg;
+}
+
+.abilities-block {
+  padding: 90px 0;
+
+  .abilities-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+
+  .abilities-text {
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: $font-base;
+      color: $text-dark;
+      margin-bottom: 30px;
+    }
+  }
+
+  .abilities-row {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      font-size: $font-md;
+      margin-bottom: 6px;
+    }
+  }
+
+  .abilities-bar {
+    background: $gray-light;
+    height: 6px;
+    border-radius: $radius-md;
+    position: relative;
+
+    > div {
+      height: 100%;
+      background: $primary-color;
+      border-radius: $radius-md;
+      position: relative;
+    }
+
+    .abilities-value {
+      position: absolute;
+      top: -16px;
+      left: calc(var(--skill, 100%));
+      transform: translateX(-50%);
+      background: $black;
+      color: $white;
+      font-size: $font-xs;
+      padding: 4px 7px;
+      border-radius: $radius-sm;
+      white-space: nowrap;
+    }
+  }
+
+  .abilities-image {
+    img {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+    }
+  }
+}
+

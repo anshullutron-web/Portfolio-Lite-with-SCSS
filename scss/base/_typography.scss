@@ -1,4 +1,10 @@
 body {
-  font-family: $font-primary;
-  color: $text-color;
+  font-family: $font-base;
+  color: $text;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.25;
 }

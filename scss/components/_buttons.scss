@@ -1,0 +1,97 @@
+.btn {
+  padding: 10px 22px;
+  font-size: 13px;
+  display: inline-block;
+
+  &.solid {
+    background: #0abf9e;
+    color: #fff;
+  }
+
+  &.outline {
+    border: 2px solid #0abf9e;
+    color: #fff;
+
+    &:hover {
+      color: #0abf9e;
+    }
+  }
+
+  &.outlin {
+    border: 2px solid #0abf9e;
+    color: #0abf9e;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &.outlinee {
+    border: 2px solid #0abf9e;
+    color: black;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  &.outlineee {
+    border: 2px solid #0abf9e;
+    color: #0abf9e;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}
+
+/* Other hover utilities */
+.act {
+  &:hover {
+    background: #0abf9e;
+    color: white;
+  }
+}
+
+.read-btn {
+  &:hover {
+    background: black;
+  }
+}
+
+.bb {
+  &:hover {
+    background: black;
+  }
+}
+
+.aa {
+  &:hover {
+    color: #0abf9e;
+  }
+}
+
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease, margin-left 0.3s ease;
+  }
+
+  &:hover {
+    color: #0abf9e;
+
+    &::after {
+      margin-left: 14px;
+    }
+  }
+}

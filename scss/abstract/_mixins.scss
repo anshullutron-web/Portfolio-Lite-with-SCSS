@@ -1,0 +1,18 @@
+@mixin flex-between {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+@mixin grid($cols, $gap: 30px) {
+display: grid;
+grid-template-columns: repeat($cols, 1fr);
+gap: $gap;
+}
+
+@mixin icon($size, $img) {
+width: $size;
+height: $size;
+border-radius: 50%;
+background: $white url($img) center / cover no-repeat;
+}

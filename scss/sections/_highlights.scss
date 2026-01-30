@@ -1,0 +1,33 @@
+.highlights {
+  padding: 90px 0;
+
+  &-grid {
+    @include grid(2, 60px);
+  }
+
+  &-cards {
+    @include grid(2, 25px);
+  }
+
+  &-card {
+    background: $primary;
+    color: $white;
+    padding: 35px;
+    clip-path: polygon(0 0,85% 0,100% 15%,100% 100%,0 100%);
+    transition: $transition;
+
+    &:hover {
+      clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+    h4 {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+}
