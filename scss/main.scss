@@ -1,38 +1,36 @@
-@import "abstract/_variables";
-@import "abstract/_mixins";
+@use "abstract";
 
-@import "base/_reset";
-@import "base/_typography";
-@import "base/_base";
+@use "base/reset";
+@use "base/typography";
+@use "base/base";
 
-@import "layout/_header";
-@import "layout/_hero";
-@import "layout/_footer";
-@import "layout/_wrapper";
-@import "layout/_topbar";
-@import "layout/_navbar";
+@use "layout/header";
+@use "layout/hero";
+@use "layout/footer";
+@use "layout/wrapper";
+@use "layout/topbar";
+@use "layout/navbar";
 
-@import "components/_buttons";
-@import "components/_cards";
-@import "components/_icons";
-@import "components/_tags";
+@use "components/buttons";
+@use "components/cards";
+@use "components/icons";
+@use "components/tags";
 
+@use "sections/blog";
+@use "sections/contact";
+@use "sections/cta";
+@use "sections/featured";
+@use "sections/highlights";
+@use "sections/intro";
+@use "sections/map";
+@use "sections/offerings";
+@use "sections/projects";
+@use "sections/rates";
+@use "sections/staff";
+@use "sections/stats";
+@use "sections/testimonials";
+@use "sections/abilities";
 
-@import "sections/_blog";
-@import "sections/_contact";
-@import "sections/_cta";
-@import "sections/_featured";
-@import "sections/_highlights";
-@import "sections/_intro";
-@import "sections/_map";
-@import "sections/_offerings";
-@import "sections/_projects";
-@import "sections/_rates";
-@import "sections/_staff";
-@import "sections/_stats";
-@import "sections/_testimonials";
-@import "sections/_abilities";
+@use "utilities/responsive";
 
-@import "utilities/_responsive";
-
-@import "pages/_home";
+@use "pages/home";

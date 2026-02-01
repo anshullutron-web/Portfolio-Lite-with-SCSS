@@ -1,31 +1,26 @@
-$font-primary: Arial, Helvetica, sans-serif;
-$text-color: #222;
-$white: #fff;
-$black: #000;
-$border-light: #eee;
-$accent: #0abf9e;
-$container-width: 1200px;
+/* COLORS */
 $primary: #0abf9e;
 $dark: #000;
+$white: #fff;
 $text: #222;
 $gray: #555;
-$light-bg: #cfe5df;
-$white: #fff;
+$border: #eee;
+
+/* FONTS */
 $font-base: Arial, Helvetica, sans-serif;
 $font-heading: 'Poppins', sans-serif;
-$transition: .3s ease;
-$radius: 18px;
-$primary-color: #0abf9e;
-$white: #fff;
+
+/* RADIUS */
+$radius-sm: 5px;
+$radius-md: 18px;
+$radius-lg: 40px;
+
+/* TRANSITION */
+$transition: all 0.3s ease;
+
+$container-width: 1200px;
 $black: #000;
-$text-dark: #555;
-$gray-light: #eee;
+$border-light: #eee;
+$light: #fff;
+$accent: #0abf9e;
 
-$radius-sm: 3px;
-$radius-md: 5px;
-$radius-lg: 20px;
-
-$font-xs: 11px;
-$font-sm: 12px;
-$font-md: 13px;
-$font-base: 14px;

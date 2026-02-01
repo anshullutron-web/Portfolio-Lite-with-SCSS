@@ -1,10 +1,10 @@
-
+@use "../abstract" as *;
 .projects {
   padding: 60px 0;
   text-align: center;
 }
 
-.projects-filters {
+.filter-tabs {
   margin: 30px 0;
 
   button {
@@ -13,8 +13,6 @@
     border: 1px solid #0abf9e;
     background: #fff;
     font-size: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
   }
 
   .active {
@@ -30,10 +28,8 @@
   margin-top: 40px;
 }
 
-
-.projects-card {
+.i {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
 
   &:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);

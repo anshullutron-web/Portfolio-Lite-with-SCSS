@@ -1,0 +1,102 @@
+@use "../abstract" as *;
+.stats {
+  background: #0abf9e;
+  padding: 20px 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.stat {
+  &-icon,
+  &-icon1,
+  &-icon2,
+  &-icon3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 auto 15px;
+    background-size: cover;
+  }
+
+  &-icon {
+    background-image: url("img/b1.png");
+  }
+
+  &-icon1 {
+    background-image: url("img/b2.png");
+  }
+
+  &-icon2 {
+    background-image: url("img/b3.png");
+  }
+
+  &-icon3 {
+    background-image: url("img/b4.png");
+  }
+
+  p {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+}
+
+.count {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  min-height: 40px;
+
+  &-2200::after {
+    content: "0";
+    animation: count2200 1.2s forwards;
+  }
+
+  &-1800::after {
+    content: "0";
+    animation: count1800 1.2s forwards;
+  }
+
+  &-780::after {
+    content: "0";
+    animation: count780 1.2s forwards;
+  }
+
+  &-420::after {
+    content: "0";
+    animation: count420 1.2s forwards;
+  }
+}
+
+@keyframes count2200 {
+  0%   { content: "0"; }
+  30%  { content: "600"; }
+  60%  { content: "1400"; }
+  100% { content: "2200"; }
+}
+
+@keyframes count1800 {
+  0%   { content: "0"; }
+  30%  { content: "500"; }
+  60%  { content: "1200"; }
+  100% { content: "1800"; }
+}
+
+@keyframes count780 {
+  0%   { content: "0"; }
+  40%  { content: "300"; }
+  70%  { content: "550"; }
+  100% { content: "780"; }
+}
+
+@keyframes count420 {
+  0%   { content: "0"; }
+  40%  { content: "150"; }
+  70%  { content: "300"; }
+  100% { content: "420"; }
+}

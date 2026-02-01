@@ -1,0 +1,127 @@
+@use "../abstract" as *;
+.rates {
+  padding: 120px 0;
+  background: #fff;
+  text-align: center;
+
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #2b2b2b;
+  }
+
+  .section-sub {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+  }
+}
+
+.rates-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* COMMON CARD */
+.rates-box {
+  background: #fff;
+  width: 320px;
+  padding: 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  h4 {
+    background: #1f2a33;
+    color: #fff;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin: 35px 0 10px;
+    color: #222;
+
+    span {
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 35px 0;
+
+    li {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+  }
+
+  .btn {
+    margin-bottom: 40px;
+  }
+}
+
+/* DARK CARD */
+.rates-box.dark {
+  background: #1f2a33;
+  color: #fff;
+
+  h4 {
+    background: #19232c;
+  }
+
+  h2 {
+    color: #fff;
+
+    span {
+      color: #ccc;
+    }
+  }
+
+  ul li {
+    color: #ddd;
+  }
+}
+
+/* BUTTON FIX (MATCH IMAGE) */
+.btn.outlinee {
+  border: 2px solid #0abf9e;
+  color: #000;
+  padding: 10px 22px;
+  font-size: 13px;
+  display: inline-block;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.btn.outline {
+  border: 2px solid #0abf9e;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 13px;
+  display: inline-block;
+
+  &:hover {
+    background: #0abf9e;
+    color: #fff;
+  }
+}
+

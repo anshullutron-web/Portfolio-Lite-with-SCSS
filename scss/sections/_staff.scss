@@ -1,0 +1,17 @@
+@use "../abstract" as *;
+.staff {
+  padding: 90px 0;
+  text-align: center;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

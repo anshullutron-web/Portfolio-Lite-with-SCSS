@@ -1,3 +1,5 @@
+@use "../abstract" as *;
+
 .nav {
   background: $white;
   border-bottom: 1px solid $border-light;
