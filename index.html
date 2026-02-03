@@ -11,9 +11,9 @@
 
 <div class="topbar">
   <div class="wrap topbar-flex">
-    <span><img src="img/email logo.jpg" alt="email logo" style="width: 25px; height: 25px; padding-top: 10px;">info@yourdomain.com</span>
-    <span><img src="img/phone logo.png" alt="email logo" style="width: 30px; height: 30px; padding-top: 14px;">+18000-200-1234</span>
-    <span><img src="img/tick1.avif" alt="email logo" style="width: 25px; height: 25px; padding-top: 12px;">Open Hours: Mon - Sat 9.00 - 18.00</span>
+    <span><a href="#cta"><img src="img/email logo.jpg" alt="email logo" style="width: 25px; height: 25px; padding-top: 10px;"></a>info@yourdomain.com</span>
+    <span><a href="#contact-main"><img src="img/phone logo.png" alt="email logo" style="width: 30px; height: 30px; padding-top: 14px;"></a>+18000-200-1234</span>
+    <span><a href="#intro"><img src="img/tick1.avif" alt="email logo" style="width: 25px; height: 25px; padding-top: 12px;"></a>Open Hours: Mon - Sat 9.00 - 18.00</span>
   </div>
 </div>
 
@@ -21,17 +21,17 @@
   <div class="wrap nav-flex">
     <img src="img/logo.png" class="logo" style="height: 50px; width: 100px;">
     <nav>
-      <a class="header-btn">Home</a>
-      <a class="header-btn">About</a>
-      <a class="header-btn">Services</a>
-      <a class="header-btn">Project</a>
-      <a class="header-btn">Blog</a>
-      <a class="header-btn">Contact</a>
+      <a class="header-btn" href="#hero">Home</a>
+      <a class="header-btn" href="#intro">About</a>
+      <a class="header-btn" href="#offerings">Services</a>
+      <a class="header-btn" href="#projects">Project</a>
+      <a class="header-btn" href="#blog">Blog</a>
+      <a class="header-btn" href="#contact-main">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="hero" style=" background-image: url(img/hero.jpg); background-size: cover;">
+<section class="hero" id="hero" style=" background-image: url(img/hero.jpg); background-size: cover;">
   <div class="hero-left">
     <span class="tag">Freelancer</span>
     <h1>I’m a Creative<br>Designer & Developer</h1>
@@ -81,7 +81,7 @@
   </div>
 </section>
 
-<section class="intro">
+<section class="intro" id="intro">
   <div class="wrap intro-grid">
     <div class="intro-img">
       <img src="img/about.png">
@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="offerings-block">
+<section class="offerings-block" id="offerings">
   <div class="wrap">
     <h2 class="section-title">Our Services</h2><br>
     <p class="section-sub">
@@ -164,7 +164,7 @@
   </div>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
   <div class="wrap">
     <h2 class="projects-title">Recent Works</h2><br>
     <p class="projects-sub">We provide high standard clean website for your business solutions</p>
@@ -220,11 +220,11 @@
     <div class="staff-grid">
 
       <div class="staff-card">
-        <img src="img/team/team-01.jpg" alt="Tina">
+        <img src="img/team/team-01.jpg" alt="Alex">
         <div class="staff-overlay">
           <div class="staff-info">
-            <h4>TINA</h4>
-            <span>coordinator</span>
+            <h4>Alex</h4>
+            <span>designer</span>
           </div>
           <div class="staff-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -235,11 +235,11 @@
       </div>
 
       <div class="staff-card">
-        <img src="img/team/team-02.jpg" alt="Alex">
+        <img src="img/team/team-02.jpg" alt="Tina">
         <div class="staff-overlay">
           <div class="staff-info">
-            <h4>ALEX</h4>
-            <span>designer</span>
+            <h4>Tina</h4>
+            <span>coordinator</span>
           </div>
           <div class="staff-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -326,7 +326,7 @@
   </div>
 </section>
 
-<section class="featured">
+<section class="featured" id="featured">
   <div class="wrap featured">
     <div class="featured-img">
       <img src="img/offer.png">
@@ -344,7 +344,7 @@
   </div>
 </section>
 
-<section class="blog">
+<section class="blog" id="blog">
   <div class="wrap">
     <h2 class="section-title" style="text-align: center; justify-content: center;">Our Blog</h2>
     <br>
@@ -445,7 +445,7 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta" id="cta">
   <div class="wrap">
     <h2>Subscribe Now</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nobis quas sunt suscipit aliquid.</p>
@@ -460,7 +460,7 @@
   </div>
 </section>
 
-<section class="contact-main">
+<section class="contact-main" id="contact-main">
   <div class="wrap">
     <h2 class="section-title" style="text-align: center; justify-content: center;">Get In Touch</h2>
     <br>
@@ -576,5 +576,43 @@
   </div>
   <p>© morox business theme, All Rights Reserved | Designed by GEC Designs</p>
 </section>
+
+<script>
+  const counters = document.querySelectorAll(".stat h3");
+
+  function startContinuousCounters() {
+    counters.forEach(counter => {
+      const target = +counter.innerText;
+      let current = 0;
+
+      const speed = 30; // lower = faster
+
+      setInterval(() => {
+        current += Math.ceil(target / 100);
+
+        if (current >= target) {
+          current = 0;
+        }
+
+        counter.innerText = current;
+      }, speed);
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startContinuousCounters();
+          observer.disconnect(); // start once
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(document.querySelector(".stats"));
+</script>
+
 </body>
 </html>
