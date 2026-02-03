@@ -2,19 +2,16 @@
 .footer {
   background: #fff;
   padding: 70px 0;
-
   &-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr;
     gap: 40px;
   }
-
   &-about {
     img {
       margin-bottom: 15px;
     }
   }
-
   &-links {
     a {
       display: block;
@@ -22,12 +19,10 @@
       margin-bottom: 10px;
     }
   }
-
   &-post {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
-
     img {
       width: 60px;
       height: 40px;
@@ -35,19 +30,16 @@
     }
   }
 }
-
 .footer-bottom {
   background: #cfe5df;
   text-align: center;
   padding: 30px 0;
 }
-
 .socials {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-bottom: 15px;
-
   span {
     width: 35px;
     height: 35px;
@@ -60,7 +52,6 @@
       transform 0.3s ease,
       box-shadow 0.3s ease;
     cursor: pointer;
-
     &:hover {
       transform: translateY(-4px) scale(1.08);
       box-shadow: 
@@ -68,7 +59,6 @@
         0 0 0 6px rgba(10, 191, 158, 0.15);
     }
   }
-
   .f1 { background-image: url("img/f1.png"); background-size: cover; }
   .f2 { background-image: url("img/f2.png"); background-size: cover; }
   .f3 { background-image: url("img/f3.png"); background-size: cover; }

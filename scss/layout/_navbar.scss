@@ -1,5 +1,4 @@
 @use "../abstract" as *;
-
 .nav {
   background: $white;
   border-bottom: 1px solid $border-light;
@@ -7,14 +6,12 @@
   top: 0;
   width: 100%;
   z-index: 999;
-
   &-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
   }
-
   a {
     margin-left: 25px;
     font-size: 14px;

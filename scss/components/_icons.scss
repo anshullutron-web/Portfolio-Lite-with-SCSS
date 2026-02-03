@@ -1,5 +1,4 @@
 @use "../abstract" as *;
-
 %icon-base {
   width: 44px;
   height: 44px;
@@ -8,22 +7,18 @@
   margin-bottom: 10px;
   background-size: cover;
 }
-
 .icon {
   @extend %icon-base;
   background-image: url("img/w1.png");
 }
-
 .icon1 {
   @extend %icon-base;
   background-image: url("img/w2.png");
 }
-
 .icon2 {
   @extend %icon-base;
   background-image: url("img/w3.png");
 }
-
 .icon3 {
   @extend %icon-base;
   background-image: url("img/w4.png");

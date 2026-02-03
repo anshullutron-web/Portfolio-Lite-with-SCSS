@@ -1,1 +1,11 @@
 @use "../abstract" as *;
+.badge {
+position: absolute;
+top: 20px;
+right: 20px;
+background: #0abf9e;
+color: #fff;
+font-size: 12px;
+padding: 4px 8px;
+border-radius: 20px;
+}

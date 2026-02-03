@@ -1,63 +1,20 @@
 @use "../abstract" as *;
-
 .btn {
   padding: 10px 22px;
   font-size: 13px;
   display: inline-block;
-
-  &.solid {
-    background: $primary;
-    color: $light;
-  }
-
-  &.outline {
-    border: 2px solid $primary;
-    color: $light;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-
-  &.outlinee {
-    border: 2px solid $primary;
-    color: $dark;
-
-    &:hover {
-      background: $dark;
-      color: $light;
-    }
-  }
-}
-.btn {
-  padding: 10px 22px;
-  font-size: 13px;
-  display: inline-block;
-
   &.solid {
     background: #0abf9e;
     color: #fff;
   }
-
-  &.outline {
+  &.primary {
     border: 2px solid #0abf9e;
     color: #fff;
-
     &:hover {
       color: #0abf9e;
     }
   }
-
-  &.outlin {
-    border: 2px solid #0abf9e;
-    color: #0abf9e;
-
-    &:hover {
-      color: black;
-    }
-  }
-
-  &.outlinee {
+  &.secondary {
     border: 2px solid #0abf9e;
     color: black;
 
@@ -66,38 +23,24 @@
       color: white;
     }
   }
-
-  &.outlineee {
-    border: 2px solid #0abf9e;
-    color: #0abf9e;
-
-    &:hover {
-      background: black;
-      color: white;
-    }
-  }
 }
-
 .act {
   &:hover {
     background: #0abf9e;
     color: white;
   }
 }
-
 .read-btn {
   &:hover {
     background: black;
   }
 }
-
-.bb {
+.cta-btn {
   &:hover {
     background: black;
   }
 }
-
-.aa {
+.header-btn {
   &:hover {
     color: #0abf9e;
   }
@@ -108,14 +51,12 @@
   gap: 6px;
   transition: color 0.3s ease;
   position: relative;
-
   &::after {
     content: "→";
     display: inline-block;
     transition: transform 0.3s ease, margin-left 0.3s ease;
     margin-left: 6px;
   }
-
   &:hover {
     color: #0abf9e;
 

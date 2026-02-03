@@ -2,16 +2,84 @@
 .staff {
   padding: 90px 0;
   text-align: center;
-
   &-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 40px;
-
+  }
+  &-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
     img {
       width: 100%;
-      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    &:hover img {
+      transform: scale(1.05);
+    }
+    &:hover .staff-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+      radial-gradient(circle at top left,
+        rgba(14, 170, 150, 0.9) 0%,
+        rgba(14, 170, 150, 0.9) 45%,
+        transparent 46%),
+      radial-gradient(circle at bottom right,
+        rgba(14, 170, 150, 0.9) 0%,
+        rgba(14, 170, 150, 0.9) 45%,
+        transparent 46%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.45s ease;
+  }
+  &-info {
+    text-align: left;
+    color: #fff;
+    h4 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    span {
+      font-size: 14px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+  }
+  &-social {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      color: #0eaa96;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      &:hover {
+        background: #0eaa96;
+        color: #fff;
+        transform: translateY(-4px);
+      }
     }
   }
 }

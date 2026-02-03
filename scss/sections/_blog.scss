@@ -8,49 +8,40 @@
     gap: 40px;
     margin-top: 60px;
   }
-
   &-card {
     background: #fff;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
   }
-
   &-img {
     position: relative;
-
     img {
       width: 100%;
       display: block;
     }
   }
-
   &-content {
     padding: 25px;
-
     h3 {
       font-size: 18px;
       margin-bottom: 10px;
     }
-
     h4 {
       font-size: 15px;
       margin-bottom: 10px;
     }
-
     p {
       font-size: 13px;
       color: #555;
       margin-bottom: 15px;
     }
   }
-
   &-side {
     .blog-card {
       margin-bottom: 25px;
     }
   }
 }
-
 .date {
   position: absolute;
   top: 15px;
@@ -61,7 +52,6 @@
   padding: 6px 8px;
   text-align: center;
 }
-
 .read-btn {
   display: inline-block;
   background: #0abf9e;
@@ -69,7 +59,6 @@
   font-size: 12px;
   padding: 8px 14px;
 }
-
 .meta {
   display: flex;
   gap: 15px;
@@ -77,5 +66,3 @@
   color: #777;
   margin-top: 15px;
 }
-
-

@@ -1,8 +1,9 @@
 @use "../abstract" as *;
-
+/*To wrap content within a container*/
 .wrap {
   width: 90%;
   max-width: $container-width;
   margin: auto;
+    padding-left: 16px;
+  padding-right: 16px;
 }
-

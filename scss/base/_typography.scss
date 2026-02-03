@@ -1,10 +1,10 @@
 @use "../abstract" as *;
-
+/*Body global style*/
 body {
   font-family: $font-base;
   color: $text;
 }
-
+/*Headings style*/
 h1, h2, h3, h4, h5 {
   font-family: $font-heading;
   font-weight: 600;

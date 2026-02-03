@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Lite</title>
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -20,12 +21,12 @@
   <div class="wrap nav-flex">
     <img src="img/logo.png" class="logo" style="height: 50px; width: 100px;">
     <nav>
-      <a class="aa">Home</a>
-      <a class="aa">About</a>
-      <a class="aa">Services</a>
-      <a class="aa">Project</a>
-      <a class="aa">Blog</a>
-      <a class="aa">Contact</a>
+      <a class="header-btn">Home</a>
+      <a class="header-btn">About</a>
+      <a class="header-btn">Services</a>
+      <a class="header-btn">Project</a>
+      <a class="header-btn">Blog</a>
+      <a class="header-btn">Contact</a>
     </nav>
   </div>
 </header>
@@ -36,8 +37,8 @@
     <h1>I’m a Creative<br>Designer & Developer</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque vel aut animi quam ducimus consequatur voluptates delectus, sapiente.</p>
     <div class="hero-btns">
-      <a class="btn outline">GET STARTED</a>
-      <a class="btn outline">BUY NOW</a>
+      <a class="btn primary">GET STARTED</a>
+      <a class="btn primary">BUY NOW</a>
     </div>
   </div>
 
@@ -91,7 +92,7 @@
       <h4>Who We Are</h4>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus earum repellendus architecto iste labore autem culpa unde asperiores neque nostrum, ratione nemo laudantium ex dolores mollitia id impedit aut nihil rem cum atque harum dolorum? Vero officiis, nihil necessitatibus, minima sequi cum similique tempore illum obcaecati deleniti voluptates ducimus sint.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem suscipit.</p>
-      <a class="btn outlinee arrow-btn">READ MORE</a>
+      <a class="btn secondary arrow-btn">READ MORE</a>
     </div>
   </div>
 </section>
@@ -211,14 +212,62 @@
 <section class="staff">
   <div class="wrap">
     <h2 class="section-title">Our Team</h2><br>
-    <p class="section-sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam magnam nihil dolores maxime aspernatur saepe.</p>
+    <p class="section-sub">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Quam magnam nihil dolores maxime aspernatur saepe.
+    </p>
+
     <div class="staff-grid">
-      <img src="img/team/team-01.jpg" class="i">
-      <img src="img/team/team-02.jpg" class="i">
-      <img src="img/team/team-03.jpg" class="i">
+
+      <div class="staff-card">
+        <img src="img/team/team-01.jpg" alt="Tina">
+        <div class="staff-overlay">
+          <div class="staff-info">
+            <h4>TINA</h4>
+            <span>coordinator</span>
+          </div>
+          <div class="staff-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="staff-card">
+        <img src="img/team/team-02.jpg" alt="Alex">
+        <div class="staff-overlay">
+          <div class="staff-info">
+            <h4>ALEX</h4>
+            <span>designer</span>
+          </div>
+          <div class="staff-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="staff-card">
+        <img src="img/team/team-03.jpg" alt="Sara">
+        <div class="staff-overlay">
+          <div class="staff-info">
+            <h4>SARA</h4>
+            <span>manager</span>
+          </div>
+          <div class="staff-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <section class="testimonials">
   <br><br>
@@ -258,7 +307,7 @@
           <li>Enhanced Security</li>
           <li>Unlimited Support</li>
         </ul>
-        <a class="btn outlinee">GET STARTED</a>
+        <a class="btn secondary">GET STARTED</a>
       </div>
 
       <div class="rates-box dark">
@@ -271,7 +320,7 @@
           <li>Enhanced Security</li>
           <li>Unlimited Support</li>
         </ul>
-        <a class="btn outline">GET STARTED</a>
+        <a class="btn primary">GET STARTED</a>
       </div>
     </div>
   </div>
@@ -406,7 +455,7 @@
     </label>
     <div class="sub-form">
       <input type="email" placeholder="Enter your email">
-      <button class="bb">➤</button>
+      <button class="cta-btn">➤</button>
     </div>
   </div>
 </section>
