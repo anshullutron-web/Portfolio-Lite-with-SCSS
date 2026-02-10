@@ -50,16 +50,27 @@ h1, h2, h3, h4, h5 {
   position: sticky;
   top: 0;
   z-index: 999;
+  /* Desktop nav links */
 }
 .nav-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  align-items: center;
+}
+.nav nav {
+  display: flex;
+  align-items: center;
 }
 .nav a {
   margin-left: 25px;
   font-size: 14px;
+}
+
+.hamburger,
+#nav-toggle {
+  display: none;
 }
 
 .hero {
@@ -1259,9 +1270,7 @@ img {
   height: auto;
 }
 
-/* =========================
-   LARGE DESKTOP ≤1200px
-========================= */
+/* LARGE DESKTOP ≤1200px*/
 @media (max-width: 1200px) {
   .hero-left {
     padding: 100px 50px;
@@ -1271,9 +1280,7 @@ img {
     gap: 20px;
   }
 }
-/* =========================
-   TABLET ≤992px
-========================= */
+/* TABLET ≤992px*/
 @media (max-width: 992px) {
   section {
     padding: 70px 0;
@@ -1365,6 +1372,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
   nav a {
     font-size: 13px;
@@ -1386,6 +1394,7 @@ img {
   .footer-grid,
   .blog-grid {
     grid-template-columns: 1fr;
+    justify-content: center;
   }
   /* Highlights – MOBILE */
   .highlights-cards {
@@ -1438,9 +1447,7 @@ img {
     width: 100%;
   }
 }
-/* =========================
-   SMALL MOBILE ≤480px
-========================= */
+/*SMALL MOBILE ≤480px */
 @media (max-width: 480px) {
   section {
     padding: 60px 0;
@@ -1479,9 +1486,7 @@ img {
     display: none;
   }
 }
-/* =========================
-   MOBILE DECORATION FIXES
-========================= */
+/*MOBILE DECORATION FIXES*/
 @media (max-width: 768px) {
   /* ---- TESTIMONIALS ---- */
   .wrap .testimonials:last-child::before {
@@ -1508,10 +1513,7 @@ img {
     height: 260px;
   }
 }
-/* =========================
-   FIX HIGHLIGHTS ON TABLET
-   2 cards per row
-========================= */
+/* FIX HIGHLIGHTS ON TABLET */
 @media (max-width: 1024px) and (min-width: 768px) {
   .highlights-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1519,5 +1521,168 @@ img {
   .highlights-card {
     max-width: 100%;
     margin: 0;
+  }
+}
+/* =========================
+   MOBILE HEADER HAMBURGER
+========================= */
+@media (max-width: 768px) {
+  .nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  /* Hide nav initially */
+  .nav-flex nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  /* Keep original button styles */
+  .nav-flex nav a {
+    margin: 0;
+  }
+  /* Toggle nav */
+  #nav-toggle:checked ~ nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  /* Hide checkbox */
+  #nav-toggle {
+    display: none;
+  }
+  /* Hamburger */
+  .hamburger {
+    width: 26px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  /* Hamburger animation */
+  #nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+@media (max-width: 992px) {
+  footer,
+  .footer-grid {
+    text-align: center;
+  }
+  .footer-grid {
+    justify-items: center;
+  }
+  .footer-grid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-grid ul {
+    padding: 0;
+  }
+  .footer-grid li {
+    list-style: none;
+  }
+  .footer-social,
+  .footer-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer-grid {
+    gap: 30px;
+  }
+  .footer-grid a {
+    margin: 4px 0;
+  }
+}
+.highlights-cards {
+  align-items: stretch;
+}
+
+/* Card sizing */
+.highlights-card {
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .highlights-card {
+    min-height: 300px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .highlights-card {
+    min-height: 260px;
+  }
+}
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+  .wrap.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Image on top */
+  .wrap.featured > .featured-img {
+    order: 1;
+    margin-bottom: 30px;
+  }
+  /* Content below */
+  .wrap.featured > .featured {
+    order: 2;
+    text-align: center;
+    max-width: 680px;
+  }
+  /* Paragraph readability */
+  .wrap.featured .featured p {
+    text-align: justify;
+    line-height: 1.7;
+  }
+}
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .wrap.featured .featured {
+    padding: 0 10px;
+  }
+  .wrap.featured .featured p {
+    font-size: 14px;
+    line-height: 1.8;
   }
 }/*# sourceMappingURL=main.css.map */

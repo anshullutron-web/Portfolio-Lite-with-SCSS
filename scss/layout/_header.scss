@@ -20,9 +20,19 @@
   &-flex {
     @include flex-between;
     height: 70px;
+    align-items: center;
+  }
+  /* Desktop nav links */
+  nav {
+    display: flex;
+    align-items: center;
   }
   a {
     margin-left: 25px;
     font-size: 14px;
   }
+}
+.hamburger,
+#nav-toggle {
+  display: none;
 }
