@@ -50,7 +50,6 @@ h1, h2, h3, h4, h5 {
   position: sticky;
   top: 0;
   z-index: 999;
-  /* Desktop nav links */
 }
 .nav-flex {
   display: flex;
@@ -58,6 +57,9 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   height: 70px;
   align-items: center;
+}
+.nav {
+  /* Desktop nav links */
 }
 .nav nav {
   display: flex;
@@ -207,16 +209,20 @@ h1, h2, h3, h4, h5 {
   top: 0;
   width: 100%;
   z-index: 999;
-  /* Logo */
-  /* Navigation */
 }
 .nav-flex {
   display: flex;
   align-items: center;
   height: 70px;
 }
+.nav {
+  /* Logo */
+}
 .nav .logo {
   flex-shrink: 0;
+}
+.nav {
+  /* Navigation */
 }
 .nav nav {
   display: flex;
@@ -1220,49 +1226,58 @@ check {
   font-size: 14px;
   color: #555;
   margin-bottom: 30px;
+  max-width: 520px;
 }
 
 .abilities-row {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 .abilities-row span {
   display: block;
-  font-size: 13px;
-  margin-bottom: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .abilities-bar {
   background: #eee;
   height: 6px;
-  border-radius: 5px;
+  border-radius: 6px;
   position: relative;
+  /* grey track shadow */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .abilities-bar > div {
+  width: 0;
   height: 100%;
-  background: #0abf9e;
-  border-radius: 5px;
   position: relative;
-}
-.abilities-bar > div + .abilities-value {
-  left: calc(var(--skill, 100%));
+  border-radius: 6px;
+  background: linear-gradient(90deg, #0abf9e, #08a88a);
+  /* bar shadow */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* black percentage box */
 .abilities-value {
   position: absolute;
-  top: -16px;
+  top: -26px;
+  right: 0;
+  transform: translateX(50%);
   background: #000;
   color: #fff;
   font-size: 11px;
-  padding: 4px 7px;
+  padding: 4px 6px;
   border-radius: 3px;
+  line-height: 1;
   white-space: nowrap;
-  transform: translateX(-50%);
 }
 
 .abilities-image img {
-  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
-  height: 100%;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
 }
 
 img {

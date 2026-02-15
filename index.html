@@ -147,37 +147,57 @@
 <section class="abilities-block">
   <div class="wrap abilities-layout">
     <div class="abilities-text">
-      <h2>OurSkills</h2>
+      <h2>Our Skills</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam inventore officiis tempora ipsa nostrum impedit cumque, voluptatibus facilis tenetur reiciendis, nobis veritatis nam repudiandae.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam
+        inventore officiis tempora ipsa nostrum impedit cumque, voluptatibus
+        facilis tenetur reiciendis, nobis veritatis nam repudiandae.
       </p>
 
       <div class="abilities-row">
         <span>Web Design</span>
-        <div class="abilities-bar"><div style="width:95%">95%</div></div>
+        <div class="abilities-bar">
+          <div data-skill="95">
+            <span class="abilities-value">95%</span>
+          </div>
+        </div>
       </div>
 
       <div class="abilities-row">
         <span>Graphic Design</span>
-        <div class="abilities-bar"><div style="width:80%">80%</div></div>
+        <div class="abilities-bar">
+          <div data-skill="80">
+            <span class="abilities-value">80%</span>
+          </div>
+        </div>
       </div>
 
       <div class="abilities-row">
         <span>Web Development</span>
-        <div class="abilities-bar"><div style="width:90%">90%</div></div>
+        <div class="abilities-bar">
+          <div data-skill="90">
+            <span class="abilities-value">90%</span>
+          </div>
+        </div>
       </div>
 
       <div class="abilities-row">
         <span>Photoshop</span>
-        <div class="abilities-bar"><div style="width:92%">92%</div></div>
+        <div class="abilities-bar">
+          <div data-skill="92">
+            <span class="abilities-value">92%</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="abilities-image">
-      <img src="img/skills.jpg">
+      <img src="img/skills.jpg" alt="Team working">
     </div>
   </div>
 </section>
+
+
 
 <section class="projects" id="projects">
   <div class="wrap">
@@ -627,7 +647,30 @@
     { threshold: 0.4 }
   );
 
-  observer.observe(document.querySelector(".stats"));
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".abilities-bar > div");
+
+  bars.forEach(bar => {
+    const target = parseInt(bar.dataset.skill, 10);
+    const valueBox = bar.querySelector(".abilities-value");
+    let width = 0;
+    const speed = 0.6; // perfect medium speed
+
+    function animate() {
+      if (width < target) {
+        width += speed;
+        bar.style.width = width + "%";
+        valueBox.textContent = Math.round(width) + "%";
+        requestAnimationFrame(animate);
+      } else {
+        bar.style.width = target + "%";
+        valueBox.textContent = target + "%";
+      }
+    }
+
+    animate();
+  });
+});
 </script>
 
 </body>
