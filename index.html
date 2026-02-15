@@ -648,28 +648,49 @@
   );
 
 document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".abilities-block");
   const bars = document.querySelectorAll(".abilities-bar > div");
 
-  bars.forEach(bar => {
-    const target = parseInt(bar.dataset.skill, 10);
-    const valueBox = bar.querySelector(".abilities-value");
-    let width = 0;
-    const speed = 0.6; // perfect medium speed
+  const animateBars = () => {
+    bars.forEach(bar => {
+      const target = parseInt(bar.dataset.skill, 10);
+      const valueBox = bar.querySelector(".abilities-value");
+      let width = 0;
+      const speed = 0.8; 
 
-    function animate() {
-      if (width < target) {
-        width += speed;
-        bar.style.width = width + "%";
-        valueBox.textContent = Math.round(width) + "%";
-        requestAnimationFrame(animate);
-      } else {
-        bar.style.width = target + "%";
-        valueBox.textContent = target + "%";
+      bar.style.width = "0%";
+      valueBox.textContent = "0%";
+
+      function animate() {
+        if (width < target) {
+          width += speed;
+          bar.style.width = width + "%";
+          valueBox.textContent = Math.round(width) + "%";
+          requestAnimationFrame(animate);
+        } else {
+          bar.style.width = target + "%";
+          valueBox.textContent = target + "%";
+        }
       }
-    }
 
-    animate();
-  });
+      animate();
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateBars();
+        }
+      });
+    },
+    {
+      threshold: 0.4
+    }
+  );
+
+  observer.observe(section);
 });
 </script>
 
